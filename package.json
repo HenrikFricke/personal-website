@@ -9,12 +9,14 @@
     "url": "https://github.com/henrikfricke"
   },
   "scripts": {
-    "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
-    "dev:remix": "remix watch",
-    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
-    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
+    "build": "run-s build:*",
+    "build:css": "npm run generate:css -- --minify",
+    "build:remix": "remix build",
     "dev": "remix build && run-p dev:*",
+    "dev:remix": "remix watch",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
+    "generate:css": "npx tailwindcss -i ./styles/app.css -o ./app/styles/app.css",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler"
   },
   "dependencies": {

@@ -1,3 +1,33 @@
+/* https://google-webfonts-helper.herokuapp.com/fonts/jost?subsets=latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+        url('/fonts/jost/jost-v12-latin-regular.woff2') format('woff2'),
+        url('/fonts/jost/jost-v12-latin-regular.woff') format('woff');
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/jost?subsets=latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+        url('/fonts/jost/jost-v12-latin-600.woff2') format('woff2'),
+        url('/fonts/jost/jost-v12-latin-600.woff') format('woff');
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/francois-one?subsets=latin */
+@font-face {
+  font-family: 'Francois One';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/francois-one/francois-one-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/francois-one/francois-one-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
