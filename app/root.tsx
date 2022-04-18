@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import {
   Links,
   LiveReload,
@@ -8,9 +8,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "./styles/app.css";
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: styles }];
+};
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Hi, I’m Henrik Fricke",
   viewport: "width=device-width,initial-scale=1",
 });
 
