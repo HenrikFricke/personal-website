@@ -5,6 +5,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      primary: '#F4DD0E',
+      sedondary: '#9D52FD',
+      tertiary: '#F952FD',
+    },
     extend: {
       fontFamily: {
         'sans': ['Jost', ...defaultTheme.fontFamily.sans],
