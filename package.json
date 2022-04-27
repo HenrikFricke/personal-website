@@ -32,6 +32,7 @@
     "@cloudflare/workers-types": "^3.4.0",
     "@remix-run/dev": "^1.4.0",
     "@remix-run/eslint-config": "^1.4.0",
+    "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "autoprefixer": "^10.4.4",
