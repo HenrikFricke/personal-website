@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -6,15 +6,18 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: '#F4DD0E',
-      sedondary: '#9D52FD',
-      tertiary: '#F952FD',
+      primary: "#F4DD0E",
+      sedondary: "#9D52FD",
+      tertiary: "#F952FD",
     },
     extend: {
       fontFamily: {
-        'sans': ['Jost', ...defaultTheme.fontFamily.sans],
-        'francois-one': ['Francois One', ...defaultTheme.fontFamily.sans],
+        "sans": ["Jost", ...defaultTheme.fontFamily.sans],
+        "francois-one": ["Francois One", ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        wave: "url('/img/wave.svg')",
+      }
     }
   },
   plugins: [],
