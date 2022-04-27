@@ -24,10 +24,12 @@ export const meta: MetaFunction = () => ({
   "twitter:image": socialShareImage,
   "og:url": "https://henrikfricke.dev",
   description: {
+    name: "description",
     property: "og:description",
     content: description,
   },
   image: {
+    name: "image",
     property: "og:image",
     content: socialShareImage,
   },
