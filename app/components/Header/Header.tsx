@@ -13,14 +13,17 @@ export const Header: React.FC<HeaderProps> = (props) => {
     <header className="bg-primary p-6 md:p-16 min-h-screen-ios min-h-screen flex items-center justify-center bg-wave bg-center bg-repeat-x">
       <section className="z-10 mr-2 mb-2 lg:mr-4 lg:mb-4 relative max-w-4xl before:absolute before:bg-sedondary before:inset-0 before:translate-x-1 before:translate-y-1 lg:before:translate-x-2 lg:before:translate-y-2 after:absolute after:bg-tertiary after:inset-0 after:translate-x-2 after:translate-y-2 lg:after:translate-x-4 lg:after:translate-y-4 after:-z-10">
         <section className="md:flex relative bg-primary border-2 p-8 md:p-16 md:items-center">
-          <img
-            className="w-full border-2 max-h-52 object-cover object-[center_20%] md:max-w-[300px] md:max-h-max"
-            src="/img/profile.jpg"
-            alt="just a pic showing me"
-            role="presentation"
-            width={300}
-            height={453}
-          />
+          <picture className="w-full border-2 max-h-52 object-cover object-[center_20%] md:max-w-[300px] md:max-h-max">
+            <source srcSet="/img/profile.avif" type="image/avif" />
+            <source srcSet="/img/profile.webp" type="image/webp" />
+            <img
+              src="/img/profile.jpg"
+              alt="just a pic showing me"
+              role="presentation"
+              width={300}
+              height={453}
+            />
+          </picture>
           <section className="md:ml-16 mt-4">
             <h1 className="font-francois-one text-5xl lg:text-6xl mb-4">
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
