@@ -20,7 +20,6 @@ export const meta: MetaFunction = () => ({
   "twitter:description": description,
   "twitter:title": title,
   "twitter:site": "@henrik_fricke",
-  "twitter:creator": "@henrik_fricke",
   "twitter:image": socialShareImage,
   "og:url": "https://henrikfricke.dev",
   description: {
