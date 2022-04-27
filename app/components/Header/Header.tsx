@@ -18,6 +18,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
             src="/img/profile.png"
             alt="just a pic showing me"
             role="presentation"
+            width={300}
+            height={453}
+            loading="lazy"
           />
           <section className="md:ml-12 lg:ml-20 mt-4">
             <h1 className="font-francois-one text-5xl lg:text-6xl mb-4">
