@@ -31,8 +31,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
               height={453}
             />
           </picture>
-          <section className="md:ml-16 mt-4">
-            <h1 className="font-francois-one text-5xl lg:text-6xl mb-4">
+          <section className="md:ml-16 mt-5 md:mt-0">
+            <h1 className="font-francois-one text-5xl lg:text-6xl mb-3 md:mb-4">
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
               {props.firstName}
             </h1>
