@@ -1,5 +1,4 @@
 import * as icons from "react-feather";
-import profile from "../../images/profile.png";
 
 export interface HeaderProps {
   firstName: string;
@@ -16,7 +15,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
         <section className="md:flex relative bg-primary border-2 p-8 md:px-16 md:py-20 md:items-center">
           <img
             className="w-full border-2 max-h-52 object-cover object-[center_20%] md:max-w-[300px] md:max-h-max"
-            src={profile}
+            src="/img/profile.png"
             alt="just a pic showing me"
             role="presentation"
           />
