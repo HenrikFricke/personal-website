@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
               {props.firstName}
             </h1>
-            <span className="block text-l lg:text-xl max-w-prose font-normal mb-5">
+            <span className="block text-l lg:text-xl max-w-prose font-normal mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
               eros a diam euismod pretium. Aliquam quis ornare nunc. Etiam.
             </span>
@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                     rel="noreferrer"
                     title={title}
                   >
-                    <Icon size={24} aria-hidden="true" focusable="false" />
+                    <Icon size={20} aria-hidden="true" focusable="false" />
                     <span className="sr-only">{title}</span>
                   </a>
                 );
