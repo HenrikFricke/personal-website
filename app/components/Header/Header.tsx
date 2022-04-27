@@ -21,6 +21,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
               src="/img/profile.jpg"
               alt="just a pic showing me"
               role="presentation"
+              loading="lazy"
+              decoding="async"
               width={300}
               height={453}
             />
