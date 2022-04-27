@@ -31,7 +31,7 @@ export const meta: MetaFunction = () => ({
     property: "og:image",
     content: socialShareImage,
   },
-  "og:type": {
+  type: {
     property: "og:type",
     content: "website",
   },
