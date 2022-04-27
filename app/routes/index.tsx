@@ -1,6 +1,21 @@
+import type { LoaderFunction, MetaFunction } from "@remix-run/cloudflare";
+import { json } from "@remix-run/cloudflare";
+import { useLoaderData } from "@remix-run/react";
+import { Twitter, GitHub, Linkedin } from "react-feather";
 import profile from "../images/profile.png";
+import meData from "../data/me";
+
+export const loader: LoaderFunction = async () => {
+  return json(meData);
+};
+
+export const meta: MetaFunction = () => ({
+  title: `Hi, I’m ${meData.firstName} ${meData.lastName}`,
+});
 
 export default function Index() {
+  const me = useLoaderData<typeof meData>();
+
   return (
     <>
       <header className="bg-primary p-6 lg:pt-20 lg:pb-20">
@@ -15,12 +30,43 @@ export default function Index() {
             <section className="md:ml-20 mt-4">
               <h1 className="font-francois-one text-5xl lg:text-6xl mb-4">
                 <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
-                Henrik
+                {me.firstName}
               </h1>
-              <span className="block text-l lg:text-xl max-w-prose font-normal">
+              <span className="block text-l lg:text-xl max-w-prose font-normal mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
                 eros a diam euismod pretium. Aliquam quis ornare nunc. Etiam.
               </span>
+              <section className="flex items-center">
+                <a
+                  className="mr-4"
+                  href={me.social.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Twitter"
+                >
+                  <Twitter size={24} aria-hidden="true" focusable="false" />
+                  <span className="sr-only">Twitter</span>
+                </a>
+                <a
+                  className="mr-4"
+                  href={me.social.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="GitHub"
+                >
+                  <GitHub size={24} aria-hidden="true" focusable="false" />
+                  <span className="sr-only">GitHub</span>
+                </a>
+                <a
+                  href={me.social.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="LinkedIn"
+                >
+                  <Linkedin size={24} aria-hidden="true" focusable="false" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </section>
             </section>
           </section>
         </section>
