@@ -12,8 +12,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="p-6 md:p-16 flex lg:min-h-screen items-center justify-center bg-wave dark:bg-wave-dark bg-center bg-repeat-x">
       <section className="z-10 mr-2 mb-2 lg:mr-4 lg:mb-4 relative max-w-4xl before:absolute before:bg-sedondary before:inset-0 before:translate-x-1 before:translate-y-1 lg:before:translate-x-2 lg:before:translate-y-2 after:absolute after:bg-tertiary after:inset-0 after:translate-x-2 after:translate-y-2 lg:after:translate-x-4 lg:after:translate-y-4 after:-z-10">
-        <section className="md:flex relative bg-primary dark:bg-neutral-900 border-black dark:border-gray-400 border-2 p-8 md:p-16 md:items-center">
-          <picture className="relative block w-full border-black dark:border-gray-400 border-2 max-h-52 md:max-w-[300px] md:max-h-max overflow-hidden">
+        <section className="md:flex relative bg-primary dark:bg-neutral-900 border-black dark:border-zinc-300 border-2 p-8 md:p-16 md:items-center">
+          <picture className="relative block w-full border-black dark:border-zinc-300 border-2 max-h-52 md:max-w-[300px] md:max-h-max overflow-hidden">
             <source srcSet="/img/profile.avif" type="image/avif" />
             <source srcSet="/img/profile.webp" type="image/webp" />
             <img
@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
             />
           </picture>
           <section className="md:ml-16 mt-5 md:mt-0">
-            <h1 className="dark:text-gray-400 font-francois-one text-5xl lg:text-6xl mb-3 md:mb-4">
+            <h1 className="dark:text-zinc-300 font-francois-one text-5xl lg:text-6xl mb-3 md:mb-4">
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
               {props.firstName}
             </h1>
