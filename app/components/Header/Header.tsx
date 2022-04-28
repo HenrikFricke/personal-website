@@ -1,4 +1,5 @@
 import * as icons from "react-feather";
+import { use100vh } from "react-div-100vh";
 
 export interface HeaderProps {
   firstName: string;
@@ -9,8 +10,14 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
+  const height = use100vh();
+  const style = height ? { minHeight: height + "px" } : {};
+
   return (
-    <header className="bg-primary p-6 md:p-16 min-h-screen-ios min-h-screen flex items-center justify-center bg-wave bg-center bg-repeat-x">
+    <header
+      style={style}
+      className={`bg-primary p-6 md:p-16 flex min-h-screen items-center justify-center bg-wave bg-center bg-repeat-x`}
+    >
       <section className="z-10 mr-2 mb-2 lg:mr-4 lg:mb-4 relative max-w-4xl before:absolute before:bg-sedondary before:inset-0 before:translate-x-1 before:translate-y-1 lg:before:translate-x-2 lg:before:translate-y-2 after:absolute after:bg-tertiary after:inset-0 after:translate-x-2 after:translate-y-2 lg:after:translate-x-4 lg:after:translate-y-4 after:-z-10">
         <section className="md:flex relative bg-primary border-2 p-8 md:p-16 md:items-center">
           <picture className="relative block w-full border-2 max-h-52 md:max-w-[300px] md:max-h-max overflow-hidden">
@@ -21,8 +28,6 @@ export const Header: React.FC<HeaderProps> = (props) => {
               src="/img/profile.jpg"
               alt="just a pic showing me"
               role="presentation"
-              loading="lazy"
-              decoding="async"
               width={300}
               height={453}
             />
