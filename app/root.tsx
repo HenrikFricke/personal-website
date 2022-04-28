@@ -6,32 +6,13 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
 } from "@remix-run/react";
 
 import styles from "./styles/app.css";
 
 export const links: LinksFunction = () => {
-  return [
-    { rel: "stylesheet", href: styles },
-    {
-      rel: "preload",
-      href: "/fonts/jost/jost-v12-latin-regular.woff2",
-      as: "font",
-      type: "font/woff2",
-    },
-    {
-      rel: "preload",
-      href: "/fonts/francois-one/francois-one-v19-latin-regular.woff2",
-      as: "font",
-      type: "font/woff2",
-    },
-    {
-      rel: "preload",
-      href: "/img/wave.svg",
-      as: "image",
-      type: "image/svg+xml",
-    },
-  ];
+  return [{ rel: "stylesheet", href: styles }];
 };
 
 export const meta: MetaFunction = () => ({
@@ -40,6 +21,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  const matches = useMatches();
+
+  const includeScripts = matches.some((match) => match.handle?.hydrate);
+
   return (
     <html lang="en">
       <head>
@@ -54,7 +39,7 @@ export default function App() {
       <body className="bg-primary">
         <Outlet />
         <ScrollRestoration />
-        <Scripts />
+        {includeScripts ? <Scripts /> : null}
         <LiveReload />
       </body>
     </html>
