@@ -51,7 +51,7 @@ export default function App() {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </head>
-      <body>
+      <body className="bg-primary">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
