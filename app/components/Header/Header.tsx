@@ -30,10 +30,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
               {props.firstName}
             </h1>
-            <span className="block text-l lg:text-xl max-w-prose mb-6">
-              I’m a web enthusiast. I love to talk about web technologies, share
-              thoughts and ideas and contribute to OSS. Nice to meet you! ✌️
-            </span>
+            <p className="text-l lg:text-xl max-w-prose mb-3 md:mb-4">
+              I’m a web enthusiast. I love to talk about web technologies, learn
+              something new every day, and make the world just a little better.
+            </p>
+            <p className="text-l lg:text-xl max-w-prose mb-6">
+              Nice to meet you! ✌️
+            </p>
             <section className="flex items-center">
               {props.socials.map(({ title, url }) => {
                 const Icon = icons[title];
