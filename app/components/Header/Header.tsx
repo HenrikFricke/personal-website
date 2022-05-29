@@ -31,8 +31,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
               {props.firstName}
             </h1>
             <span className="block text-l lg:text-xl max-w-prose mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
-              eros a diam euismod pretium. Aliquam quis ornare nunc. Etiam.
+              I’m a web enthusiast. I love to talk about web technologies, share
+              thoughts and ideas and contribute to OSS. Nice to meet you! ✌️
             </span>
             <section className="flex items-center">
               {props.socials.map(({ title, url }) => {
