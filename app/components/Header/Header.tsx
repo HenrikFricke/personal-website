@@ -31,7 +31,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               {props.firstName}
             </h1>
             <p className="text-l lg:text-xl max-w-prose mb-3 md:mb-4">
-              I’m a web enthusiast. I love to talk about web technologies, learn
+              I love to talk about web technologies, learn
               something new every day, and make the world just a little better.
             </p>
             <p className="text-l lg:text-xl max-w-prose mb-6">

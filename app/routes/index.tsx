@@ -11,7 +11,7 @@ export const loader: LoaderFunction = async () => {
 const title = `Hi, I’m ${meData.firstName} ${meData.lastName}`;
 const socialShareImage = "https://henrikfricke.dev/img/social.jpg";
 const description =
-  "I’m a web enthusiast. I love to talk about web technologies, learn something new every day, and make the world just a little better.";
+  "I love to talk about web technologies, learn something new every day, and make the world just a little better.";
 
 export const meta: MetaFunction = () => ({
   title,
