@@ -30,12 +30,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
               <small className="text-2xl lg:text-3xl block">Hi, I’m</small>
               {props.firstName}
             </h1>
-            <p className="text-l lg:text-xl max-w-prose mb-3 md:mb-4">
-              I love to talk about web technologies, learn
-              something new every day, and make the world just a little better.
-            </p>
             <p className="text-l lg:text-xl max-w-prose mb-6">
-              Nice to meet you! ✌️
+              I love to talk about web technologies, learn something new every
+              day, and make the world just a little better.
             </p>
             <section className="flex items-center">
               {props.socials.map(({ title, url }) => {
