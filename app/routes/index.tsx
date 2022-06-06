@@ -2,6 +2,7 @@ import type { LoaderFunction, MetaFunction } from "@remix-run/cloudflare";
 import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { Header } from "../components/Header/Header";
+import { Stuff } from "../components/Stuff/Stuff";
 import meData from "../data/me";
 
 export const loader: LoaderFunction = async () => {
@@ -44,6 +45,7 @@ export default function Index() {
   return (
     <>
       <Header firstName={me.firstName} socials={Object.values(me.socials)} />
+      <Stuff />
     </>
   );
 }
