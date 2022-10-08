@@ -36,7 +36,7 @@ export default function App() {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </head>
-      <body className="bg-primary dark:bg-neutral-900 dark:text-zinc-300 dark:font-light">
+      <body className="bg-primary dark:bg-neutral-900 dark:text-zinc-300 dark:font-light text-neutral-800 dark:text-neutral-100">
         <Outlet />
         <ScrollRestoration />
         {includeScripts ? <Scripts /> : null}
