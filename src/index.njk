@@ -4,6 +4,13 @@ thumbnail: /img/social.jpg
 layout: layouts/base.njk
 ---
 
+<section class="flex fixed bottom-0 w-full justify-center items-center">
+  <a
+    href="https://war.ukraine.ua/donate/"
+    class="p-10 py-4 mb-4 bg-red-400 dark:bg-red-500 font-semibold rounded-full uppercase text-sm">
+    🇺🇦 Support Ukraine
+  </a>
+</section>
 {% include 'components/header.njk' %}
 <main class="bg-white dark:bg-neutral-800 p-6 md:p-16 py-10 lg:py-20">
   <section class="max-w-4xl mx-auto">
@@ -19,7 +26,7 @@ layout: layouts/base.njk
       </p>
     </header>
     {% for post in collections.posts | reverse %}
-      <article class="border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-5">
+      <article class="border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-6 md:mb-10">
         {% image post.data.image.url, post.data.image.alt, "block w-full rounded-xl overflow-hidden mb-6" %}
         <span class="bg-primary dark:bg-neutral-900 px-4 py-2 rounded-2xl mr-2 uppercase text-xs tracking-wide mb-4 inline-block">
           {{ post.data.type }}
