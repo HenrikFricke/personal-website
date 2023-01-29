@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"  property="og:description" content="{{ description or metadata.description }}">
+    <meta content="website" property="og:type">
+    <meta name="twitter:description"content="{{ description or metadata.description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:site" content="@henrik_fricke">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta name="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
+    {% if thumbnail %}
+      <meta name="image" property="og:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+      <meta name="twitter:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+    {% endif %}
+    {% if noIndex %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <script async defer data-domain="henrikfricke.dev" src="https://plausible.io/js/plausible.js"></script>
+  </head>
+  <body class="bg-primary dark:bg-neutral-900 dark:text-zinc-300 dark:font-light text-neutral-800">
+    {{ content | safe }}
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "sitename": "henrikfricke.dev",
+  "url": "https://henrikfricke.dev/",
+  "language": "en",
+  "description": "I love to talk about web technologies, learn something new every day, and make the world just a little better.",
+  "firstName": "Henrik",
+  "socialLinks": [
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/henrik_fricke"
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "url": "https://github.com/henrikfricke"
+    },
+    {
+      "id": "linkedin",
+      "title": "Linkedin",
+      "url": "https://www.linkedin.com/in/henrik-fricke/"
+    }
+  ],
+  "footerLinks": [
+    {
+      "title": "Privacy Policy",
+      "url": "/privacy-policy/"
+    },
+    {
+      "title": "Legal Details",
+      "url": "/legal-details/"
+    },
+    {
+      "title": "Stats",
+      "url": "https://plausible.io/henrikfricke.dev"
+    }
+  ]
+}
