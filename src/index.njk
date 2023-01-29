@@ -3,24 +3,26 @@ title: 'Hi, I’m Henrik Fricke'
 thumbnail: /img/social.jpg
 layout: layouts/base.njk
 ---
-{% include 'components/header.njk' %}
 
+{% include 'components/header.njk' %}
 <main class="bg-white dark:bg-neutral-800 p-6 md:p-16 py-10 lg:py-20">
   <section class="max-w-4xl mx-auto">
     <header class="mb-6 md:mb-16">
-      <h2 class="inline-block font-francois-one text-2xl md:text-4xl mb-10 relative before:absolute before:bg-sedondary after:absolute after:bg-gradient-to-r from-tertiary to-sedondary after:w-full after:h-2 after:bottom-[-12px] after:left-0 after:rounded-2xl">
+      <h2 class="inline-block font-francois-one text-2xl md:text-4xl mb-10 relative before:absolute before:bg-sedondary
+          after:absolute after:bg-gradient-to-r from-tertiary to-sedondary after:w-full after:h-2 after:bottom-[-12px] after:left-0
+          after:rounded-2xl">
         What’s up?
       </h2>
       <p class="leading-6 md:w-[55ch]">
-        This is a list of recent talks, publications, and open-source projects. Sharing ideas for
-        sustainable products is what drives me every day. Products for humans: Secure, fair, performant and accessible for everyone.
-        Without all the bullshit of the last decade, thanks to companies making money with data. Get in touch with me if you want to discuss healthy product development. ✌️
+        This is a list of recent talks, publications, and open-source projects. Sharing ideas for sustainable products is what
+        drives me every day. Products for humans: Secure, fair, performant and accessible for everyone. Without all the bullshit
+        of the last decade, thanks to companies making money with data. Get in touch with me if you want to discuss healthy
+        product development. ✌️
       </p>
     </header>
     {% for post in collections.posts | reverse %}
       <article class="border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-5">
         {% image post.data.image.url, post.data.image.alt, "block w-full rounded-xl overflow-hidden mb-6" %}
-
         <span class="bg-primary dark:bg-neutral-900 px-4 py-2 rounded-2xl mr-2 uppercase text-xs tracking-wide mb-4 inline-block">
           {{ post.data.type }}
         </span>
@@ -30,23 +32,29 @@ layout: layouts/base.njk
         <time datetime="{{ post.date | htmlDateString }}" class="inline-block text-sm mb-4">
           {{ post.date | readableDate }}
         </time>
-        <section class="leading-6 mb-4">
-          {{ post.templateContent| safe }}
-        </section>
-        <a class="inline-flex items-center" href="{{ post.data.link }}">
-          <span class="font-semibold bg-clip-text bg-gradient-to-r from-tertiary to-sedondary text-transparent">
-            read more
-          </span>
-          <svg
-            width="22"
-            height="16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="inline-block ml-2 mt-[2px] fill-sedondary"
-          >
-            <path d="M1 7a1 1 0 0 0 0 2V7Zm20.707 1.707a1 1 0 0 0 0-1.414L15.343.929a1 1 0 1 0-1.414 1.414L19.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM1 9h20V7H1v2Z" />
-          </svg>
-        </a>
+        {% if post.data.link %}
+          <section class="markdown leading-6 mb-4">
+            {{ post.templateContent| safe }}
+          </section>
+          <a class="inline-flex items-center" href="{{ post.data.link }}">
+            <span class="font-semibold bg-clip-text bg-gradient-to-r from-tertiary to-sedondary text-transparent">
+              read more
+            </span>
+            <svg
+              width="22"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="inline-block ml-2 mt-[2px] fill-sedondary">
+              <path d="M1 7a1 1 0 0 0 0 2V7Zm20.707 1.707a1 1 0 0 0 0-1.414L15.343.929a1 1 0 1 0-1.414 1.414L19.586 8l-5.657 5.657a1 1 0 0 0
+              1.414 1.414l6.364-6.364ZM1 9h20V7H1v2Z"/>
+            </svg>
+          </a>
+        {% else %}
+          <section class="markdown leading-6">
+            {{ post.templateContent| safe }}
+          </section>
+        {% endif %}
       </article>
     {% endfor %}
   </section>
