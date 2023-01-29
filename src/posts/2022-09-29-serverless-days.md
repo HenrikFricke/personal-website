@@ -1,7 +1,7 @@
 ---
 title: First in-person workshop at Serverless Days Hamburg 🥳
 image:
-  url: ./src/img/serverless-days-2022.png
+  url: ./src/img/serverless-days-hamburg-2022.jpg
   alt: Me on stage at Serverless Days Hamburg 2022
 link: https://github.com/superluminar-io/serverless-workshop
 type: talk
