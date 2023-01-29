@@ -2,13 +2,13 @@
   "sitename": "henrikfricke.dev",
   "url": "https://henrikfricke.dev/",
   "language": "en",
-  "description": "I love to talk about web technologies, learn something new every day, and make the world just a little better.",
+  "description": "Software developer at WakeSys — with a strong focus on web and serverless technologies.",
   "firstName": "Henrik",
   "socialLinks": [
     {
-      "id": "twitter",
-      "title": "Twitter",
-      "url": "https://twitter.com/henrik_fricke"
+      "id": "mastodon",
+      "title": "Mastodon",
+      "url": "https://mastodon.social/@henrikfricke"
     },
     {
       "id": "github",
@@ -19,6 +19,11 @@
       "id": "linkedin",
       "title": "Linkedin",
       "url": "https://www.linkedin.com/in/henrik-fricke/"
+    },
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/henrik_fricke"
     }
   ],
   "footerLinks": [
