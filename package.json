@@ -1,10 +1,11 @@
 {
   "name": "henrikfricke.dev",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
+    "start": "npm run dev",
+    "dev": "npm-run-all -p dev:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i src/css/tailwind.css -o _site/css/tailwind.css --watch --postcss",
+    "build": "run-s build:*",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i src/css/tailwind.css -o _site/css/tailwind.css --postcss"
   },
@@ -22,20 +23,27 @@
   "license": "MIT",
   "homepage": "https://github.com/henrikfricke/personal-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.10.0",
-    "@11ty/eleventy-navigation": "^0.1.6",
-    "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@mightyplow/eleventy-plugin-cache-buster": "^1.1.3",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.13",
     "eleventy-plugin-external-links": "^1.1.2",
-    "luxon": "^1.28.0",
-    "markdown-it": "^12.3.2",
-    "markdown-it-anchor": "^7.1.0",
+    "luxon": "^3.2.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.6",
     "markdown-it-for-inline": "^0.1.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.17",
-    "tailwindcss": "^3.1.8"
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  },
+  "tea": {
+    "dependencies": {
+      "nodejs.org": "19.3.0",
+      "tea.xyz": "0.19.2",
+      "npmjs.com": "9.3.0"
+    }
   }
 }

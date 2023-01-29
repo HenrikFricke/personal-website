@@ -4,8 +4,11 @@
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/)
-- [NVM](https://github.com/nvm-sh/nvm) (recommended)
+The project uses CDK in TypeScript. To run CDK locally, we need a Node.js setup on the machines. You can find a complete list of prerequisites in the [package.json](./package.json) under the key `tea`. Install them yourself or use tea:
+
+```
+$ sh <(curl tea.xyz)
+```
 
 ### Get started
 
