@@ -41,7 +41,7 @@
   },
   "tea": {
     "dependencies": {
-      "nodejs.org": "18.13.0",
+      "nodejs.org": "17.9.1",
       "tea.xyz": "0.19.2",
       "npmjs.com": "9.3.0"
     }
