@@ -23,42 +23,49 @@ layout: layouts/base.njk
         display ads. Enjoy ✌️
       </p>
     </header>
-    {% for post in collections.posts | reverse %}
-      <article class="border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-6 md:mb-10">
-        {% image post.data.image.url, post.data.image.alt, "block w-full rounded-xl overflow-hidden mb-6" %}
-        <span class="bg-primary dark:bg-neutral-900 px-4 py-2 rounded-2xl mr-2 uppercase text-xs tracking-wide mb-4 inline-block">
-          {{ post.data.type }}
-        </span>
-        <h3 class="text-xl md:text-2xl leading-8 font-semibold mb-2">
-          {{ post.data.title }}
-        </h3>
-        <time datetime="{{ post.date | htmlDateString }}" class="inline-block text-sm mb-4">
-          {{ post.date | readableDate }}
-        </time>
-        {% if post.data.link %}
-          <section class="markdown leading-6 mb-4">
-            {{ post.templateContent| safe }}
-          </section>
-          <a class="inline-flex items-center" href="{{ post.data.link }}">
-            <span class="font-semibold bg-clip-text bg-gradient-to-r from-tertiary to-sedondary text-transparent">
-              read more
+    {% for year, yearPosts in collections.postsByYear %}
+      <section class="flex">
+        <section class="w-16 -ml-16 relative">
+          <h3 class="font-francois-one text-8xl sticky top-44 -rotate-90 mt-44 mb-16 -mr-2 -z-1 text-tertiary">
+            {{ year }}
+          </h3>
+        </section>
+        {% for post in yearPosts | reverse %}
+          <article class="bg-white border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-6 md:mb-10 z-0">
+            {% image post.data.image.url, post.data.image.alt, "block w-full rounded-xl overflow-hidden mb-6" %}
+            <span class="bg-primary dark:bg-neutral-900 px-4 py-2 rounded-2xl mr-2 uppercase text-xs tracking-wide mb-4 inline-block">
+              {{ post.data.type }}
             </span>
-            <svg
-              width="22"
-              height="16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="inline-block ml-2 mt-[2px] fill-sedondary">
-              <path d="M1 7a1 1 0 0 0 0 2V7Zm20.707 1.707a1 1 0 0 0 0-1.414L15.343.929a1 1 0 1 0-1.414 1.414L19.586 8l-5.657 5.657a1 1 0 0 0
-              1.414 1.414l6.364-6.364ZM1 9h20V7H1v2Z"/>
-            </svg>
-          </a>
-        {% else %}
-          <section class="markdown leading-6">
-            {{ post.templateContent| safe }}
-          </section>
-        {% endif %}
-      </article>
+            <h3 class="text-xl md:text-2xl leading-8 font-semibold mb-2">
+              {{ post.data.title }}
+            </h3>
+            <time datetime="{{ post.date | htmlDateString }}" class="inline-block text-sm mb-4">
+              {{ post.date | readableDate }}
+            </time>
+            {% if post.data.link %}
+              <section class="markdown leading-6 mb-4">{{ post.templateContent| safe }}
+              </section>
+              <a class="inline-flex items-center" href="{{ post.data.link }}">
+                <span class="font-semibold bg-clip-text bg-gradient-to-r from-tertiary to-sedondary text-transparent">
+                  read more
+                </span>
+                <svg
+                  width="22"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="inline-block ml-2 mt-[2px] fill-sedondary">
+                  <path d="M1 7a1 1 0 0 0 0 2V7Zm20.707 1.707a1 1 0 0 0 0-1.414L15.343.929a1 1 0 1 0-1.414 1.414L19.586 8l-5.657 5.657a1 1 0 0 0
+                  1.414 1.414l6.364-6.364ZM1 9h20V7H1v2Z"/>
+                </svg>
+              </a>
+            {% else %}
+              <section class="markdown leading-6">{{ post.templateContent| safe }}
+              </section>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
     {% endfor %}
   </section>
 </main>
