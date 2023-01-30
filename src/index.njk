@@ -26,12 +26,13 @@ layout: layouts/base.njk
     {% for year, yearPosts in collections.postsByYear %}
       <section class="flex">
         <section class="w-16 -ml-16 relative">
-          <h3 class="font-francois-one text-8xl sticky top-44 -rotate-90 mt-44 mb-16 -mr-2 -z-1 text-tertiary">
+          <h3 class="font-francois-one text-8xl sticky top-36 mb-14 -rotate-90 mt-36 -mr-2 -z-1 dark:text-white">
             {{ year }}
           </h3>
         </section>
         {% for post in yearPosts | reverse %}
-          <article class="bg-white border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-6 md:mb-10 z-0">
+          <article class="bg-white dark:bg-neutral-800 border-4 border-black dark:border-zinc-300 px-4 py-5 lg:px-9 lg:py-8 rounded-2xl mb-6
+              md:mb-10 z-0">
             {% image post.data.image.url, post.data.image.alt, "block w-full rounded-xl overflow-hidden mb-6" %}
             <span class="bg-primary dark:bg-neutral-900 px-4 py-2 rounded-2xl mr-2 uppercase text-xs tracking-wide mb-4 inline-block">
               {{ post.data.type }}
