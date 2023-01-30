@@ -8,6 +8,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginCacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+const _ = require("lodash");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, classes) {
@@ -43,6 +44,14 @@ module.exports = function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
+
+  eleventyConfig.addCollection("postsByYear", (collection) => {
+    return _.chain(collection.getFilteredByTag("posts"))
+      .groupBy((post) => post.date.getFullYear())
+      .toPairs()
+      .reverse()
+      .value();
+  });
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL dd, yyyy");
